@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HISTORY & AWARDS | KEIO HIGH WATER POLO</title>
+    <style>
+        /* 全体のスタイル */
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b1d3a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        /* ヘッダー */
+        header {
+            text-align: center;
+            padding: 4rem 1rem 2rem;
+            border-bottom: 3px solid #c8102e;
+            background: linear-gradient(180deg, #1a2c4c 0%, #0b1d3a 100%);
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+        .subtitle {
+            font-size: 1rem;
+            color: #a9b5c9;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        /* セクション共通 */
+        section {
+            padding: 3rem 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2a3c5c;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .section-header-wrap {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .section-desc {
+            color: #a9b5c9;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* 圧倒的ヒストリーセクション */
+        .history-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .history-item {
+            background-color: #051024;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #c8102e;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .history-item h3 {
+            color: #ffd700;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+        .history-item p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #e0e0e0;
+        }
+
+        /* ターゲットバナー */
+        .target-banner {
+            text-align: center;
+            margin: 3rem 0;
+            background: rgba(200, 16, 46, 0.1);
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            border: 1px dashed rgba(200, 16, 46, 0.5);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .target-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+        .target-text {
+            font-size: 1rem;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* アワードカード */
+        .award-card {
+            background-color: #1a2c4c;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 5px solid #c8102e;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .award-card.crown {
+            border-left-color: #ffd700;
+        }
+        .award-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            gap: 15px;
+        }
+        .award-icon {
+            font-size: 2.5rem;
+        }
+        .award-title-group h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: #ffffff;
+        }
+        .award-title-group span {
+            font-size: 0.85rem;
+            color: #c8102e;
+            font-weight: bold;
+        }
+        .award-card.crown .award-title-group span {
+            color: #ffd700;
+        }
+        .award-desc {
+            font-size: 0.95rem;
+            color: #a9b5c9;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #2a3c5c;
+        }
+        
+        /* 受賞者リスト */
+        .winner-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .winner-item {
+            background: #051024;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 0.8rem;
+        }
+        .winner-year {
+            font-size: 1.2rem;
+            color: #ffd700;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .winner-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .winner-reason {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #a9b5c9;
+            line-height: 1.4;
+        }
+
+        /* 選考中アイテム */
+        .tbd-item {
+            background: rgba(5, 16, 36, 0.5);
+            border: 1px dashed #2a3c5c;
+            color: #556a8d;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* 戻るボタン */
+        .back-nav {
+            text-align: center;
+            padding: 2rem 1rem 4rem;
+        }
+        .back-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: #a9b5c9;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid #2a3c5c;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #2a3c5c;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HISTORY & AWARDS</h1>
+        <p class="subtitle">受け継がれる知性と、私たちが称賛する価値観</p>
+    </header>
+
+    <section>
+        <div class="section-header-wrap">
+            <h2>OUR LEGACY</h2>
+            <p class="section-desc">「日本水球は塾から始まった」<br>1世紀を超える圧倒的な実績と、社会を牽引する人材の系譜。</p>
+        </div>
+
+        <div class="history-grid">
+            <div class="history-item">
+                <h3>👑 黄金期の絶対的支配（戦前・日本選手権5連覇）</h3>
+                <p>1915年創部。他大学に先駆けて水球を体系化し、個人の身体能力に依存しない独自の戦術「フローティングシステム」を完成。1937年から1941年にかけて日本選手権で前人未到の5連覇、さらには12戦全勝の完全無敗記録を樹立し、国内に敵なしの黄金期を現出させた。</p>
+            </div>
+            <div class="history-item">
+                <h3>🧠 知略による古豪復活（インカレ連覇）</h3>
+                <p>戦後、体育専門大学が覇権を握り始めた時代において、私立総合大学の意地と「知性に基づく戦術的洗練」を徹底。1972年・1973年にインカレ連覇を達成し、スポーツ科学と組織力で再び日本の頂点を極めた。</p>
+            </div>
+            <div class="history-item">
+                <h3>🌍 日本代表と、世界を変える実業家の輩出</h3>
+                <p>ローマ五輪、東京五輪をはじめとする多数の日本代表（オリンピアン）を輩出。さらにその活躍はプール内に留まらず、「水中の格闘技」で培った極限のインテリジェンスと人間力は、キッザニア（KidZania）創業者の住谷栄之資氏に代表されるような、社会に革新をもたらす強力なリーダーシップへと結実している。</p>
+            </div>
+        </div>
+
+        <div class="target-banner">
+            <span class="target-title">🎯 TARGET: インターハイ出場</span>
+            <p class="target-text">数十年もの間超えられていない、私たちの大きな目標。<br>圧倒的な歴史に敬意を払い、自らの手でそれを塗り替える行動を私たちは称賛します。</p>
+        </div>
+
+        <div class="section-header-wrap">
+            <h2>TEAM AWARDS</h2>
+            <p class="section-desc">目標達成のため、私たちがチーム全体で称賛する3つの価値観</p>
+        </div>
+
+        <div class="award-card crown">
+            <div class="award-header">
+                <div class="award-icon">👑</div>
+                <div class="award-title-group">
+                    <span>LIFETIME ACHIEVEMENT AWARD</span>
+                    <h3>折笠礎功労賞</h3>
+                </div>
+            </div>
+            <p class="award-desc">
+                自身の卒業後も部がより良いものになっていく、未来に向けた具体的な取り組みや仕組みづくりを遂行した者へ贈られる最高の栄誉。
+            </p>
+            <ul class="winner-list">
+                <li class="winner-item">
+                    <span class="winner-year">2026</span>
+                    <span class="winner-name">麓 亜蓮</span>
+                    <span class="winner-reason">短時間でも成果が出るよう、高密度且つ実践的な練習内容を提案・実施し、チームのトレーニング基盤を大きくアップデートさせた。</span>
+                </li>
+                <li class="tbd-item">2027年度 受賞者選考中...</li>
+            </ul>
+        </div>
+
+        <div class="award-card">
+            <div class="award-header">
+                <div class="award-icon">🤝</div>
+                <div class="award-title-group">
+                    <span>BEST GIVER AWARD</span>
+                    <h3>ベストギバー賞</h3>
+                </div>
+            </div>
+            <p class="award-desc">
+                どんな小さなことであってもチームで認め合い、周囲に良い影響を与え続ける文化を体現した者を称える賞。
+            </p>
+            <ul class="winner-list">
+                <li class="winner-item">
+                    <span class="winner-year">2026</span>
+                    <span class="winner-name">畑 冴空</span>
+                    <span class="winner-reason">日々の活動の中で、チームのために最も献身的に貢献し、周囲へポジティブな影響を与え続けた。</span>
+                </li>
+                <li class="tbd-item">2027年度 受賞者選考中...</li>
+            </ul>
+        </div>
+
+        <div class="award-card">
+            <div class="award-header">
+                <div class="award-icon">🔥</div>
+                <div class="award-title-group">
+                    <span>BEYOND CHALLENGE AWARD</span>
+                    <h3>ビヨンドチャレンジ賞</h3>
+                </div>
+            </div>
+            <p class="award-desc">
+                失敗にこそ価値がある。成功したかどうかは問わず、現状に満足せずに自らの限界を超えようとする新たな挑戦に踏み出した姿勢を評価する賞。
+            </p>
+            <ul class="winner-list">
+                <li class="winner-item">
+                    <span class="winner-year">2026</span>
+                    <span class="winner-name">横岡 千章</span>
+                    <span class="winner-reason">水泳未経験から始まり、複数ポジションをこなすために、失敗を恐れず、日々のハードワークで自身及びチームに飛躍的な競技力の向上をもたらした。</span>
+                </li>
+                <li class="tbd-item">2027年度 受賞者選考中...</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="back-nav">
+        <a href="index.html" class="back-btn">◀ 新歓トップページへ戻る</a>
+    </div>
+
+</body>
+</html>
